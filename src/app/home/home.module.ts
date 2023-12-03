@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { WebcamModule } from 'ngx-webcam';
+import { ExaminerComponent } from './examiner/examiner.component';
+import { PermissionsComponent } from './permissions/permissions.component';
 
 
 @NgModule({
@@ -12,8 +15,14 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    WebcamModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    PermissionsComponent,
+    ExaminerComponent
+  ]
+  
 })
 export class HomePageModule {}

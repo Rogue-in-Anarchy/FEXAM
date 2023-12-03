@@ -1,0 +1,18 @@
+
+<ion-content>
+  <ion-button expand="full" (click)="takePicture()">Take Picture</ion-button>
+  <!-- <webcam *ngIf="!capturedImage" [height]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" [imageQuality]="1"></webcam> -->
+  <div *ngIf="capturedImage">
+    <img [src]="capturedImage" alt="webcam image">
+  </div>
+
+  <div class="mt-6 text-center" *ngIf="!capturedImage">
+    <button class="rounded-xl px-9 py-5 bg-[#1BB55C] w-80 text-2xl" (click)="takePicture()">Allow</button>
+  </div>
+  
+  <div class="mt-6 text-center" *ngIf="capturedImage">
+    <button class="rounded-xl px-9 py-5 bg-[#1BB55C] w-80 text-2xl" >Examine</button>
+  </div>
+  
+  <!-- <ion-img [src]="capturedImage" *ngIf="capturedImage"></ion-img> -->
+</ion-content>
